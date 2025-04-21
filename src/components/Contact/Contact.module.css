@@ -1,0 +1,21 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 2px;
+  border: solid 1px black;
+  background-color: inherit;
+}
+
+.name-and-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name,
+.phone {
+  display: flex;
+  gap: 4px;
+}
