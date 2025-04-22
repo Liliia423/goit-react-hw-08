@@ -1,25 +1,51 @@
 .contact {
+  width: 370px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   border-radius: 6px;
   border: solid 1px black;
   background-color: inherit;
+  padding: 0 10px;
 }
 
 .name-and-phone {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .name {
   display: flex;
-  gap: 4px;
+  gap: 8px;
+  line-height: 1;
 }
 
 .phone {
   display: flex;
-  gap: 4px;
+  gap: 8px;
+}
+
+ul {
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  padding: 0;
+}
+
+.icon {
+  line-height: 0;
+  display: block;
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+}
+
+p {
+  margin: 0;
 }
