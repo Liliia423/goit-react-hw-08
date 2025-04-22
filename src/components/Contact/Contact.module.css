@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px;
-  border-radius: 2px;
+
+  border-radius: 6px;
   border: solid 1px black;
   background-color: inherit;
 }
@@ -14,7 +14,11 @@
   gap: 8px;
 }
 
-.name,
+.name {
+  display: flex;
+  gap: 4px;
+}
+
 .phone {
   display: flex;
   gap: 4px;

@@ -1,8 +1,9 @@
-import { useState } from 'react';
+{
+  /*import { useState } from 'react';
 import './App.css';
-import { ContactForm } from './components/ContactForm/ContactForm';
-import { SearchBox } from './components/SearchBox/SearchBox';
-import { ContactList } from './components/ContactList/ContactList';
+import ContactForm from './components/ContactForm/ContactForm';
+import SearchBox from './components/SearchBox/SearchBox';
+import ContactList from './components/ContactList/ContactList';
 import initialContacts from './data/contacts.json';
 
 function App() {
@@ -27,6 +28,28 @@ function App() {
       <ContactForm onSubmit={addContact} />
       <SearchBox value={filter} onChange={setFilter} />
       <ContactList contacts={filteredContacts} onDelete={deleteContact} />
+    </div>
+  );
+}
+
+export default App;*/
+}
+import { useState } from 'react';
+import './App.css';
+import ContactList from './components/ContactList/ContactList';
+import initialContacts from './data/contacts.json';
+
+function App() {
+  const [contacts, setContacts] = useState(initialContacts);
+
+  const deleteContact = (id) => {
+    setContacts((prev) => prev.filter((c) => c.id !== id));
+  };
+
+  return (
+    <div>
+      <h1>Phonebook</h1>
+      <ContactList contacts={contacts} onDelete={deleteContact} />
     </div>
   );
 }

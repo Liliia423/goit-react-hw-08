@@ -1,16 +1,16 @@
 import styles from './Contact.module.css';
 
-export default function Contact({ name, phone, onDelete }) {
+export default function Contact({ name, number, onDelete }) {
   return (
     <div className={styles['contact']}>
       <ul className={styles['name-and-phone']}>
         <li className={styles['name']}>
-          <svg href="../../assets/profile.svg"></svg>
+          <img src="/assets/profile.svg" alt="Profile Icon" className={styles.icon} />
           <p>{name}</p>
         </li>
         <li className={styles['phone']}>
-          <svg href="../../assets/phone.svg"></svg>
-          <p>{phone}</p>
+          <img src="/assets/phone.svg" alt="Phone Icon" className={styles.icon} />
+          <p>{number}</p>
         </li>
       </ul>
       <button type="button" className={styles['delete-button']} onClick={onDelete}>
