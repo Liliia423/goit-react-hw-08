@@ -1,0 +1,17 @@
+.search-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 32px;
+  width: 370px;
+}
+
+input {
+  height: 40px;
+  padding: 0 10px;
+}
+
+label {
+  text-align: left;
+}

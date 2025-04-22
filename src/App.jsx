@@ -1,7 +1,5 @@
-{
-  /*import { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
-import ContactForm from './components/ContactForm/ContactForm';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactList from './components/ContactList/ContactList';
 import initialContacts from './data/contacts.json';
@@ -10,46 +8,21 @@ function App() {
   const [contacts, setContacts] = useState(initialContacts);
   const [filter, setFilter] = useState('');
 
-  const addContact = (newContact) => {
-    setContacts((prev) => [...prev, { id: Date.now(), ...newContact }]);
-  };
-
   const deleteContact = (id) => {
     setContacts((prev) => prev.filter((c) => c.id !== id));
   };
 
-  const filteredContacts = contacts.filter((c) =>
-    c.name.toLowerCase().includes(filter.toLowerCase()),
-  );
+  const filteredContacts = contacts.filter((c) => {
+    const [firstName, lastName] = c.name.toLowerCase().split(' ');
+    const searchTerm = filter.toLowerCase();
+    return firstName.startsWith(searchTerm) || (lastName && lastName.startsWith(searchTerm));
+  });
 
   return (
-    <div>
+    <div className="page-container">
       <h1>Phonebook</h1>
-      <ContactForm onSubmit={addContact} />
       <SearchBox value={filter} onChange={setFilter} />
       <ContactList contacts={filteredContacts} onDelete={deleteContact} />
-    </div>
-  );
-}
-
-export default App;*/
-}
-import { useState } from 'react';
-import './App.css';
-import ContactList from './components/ContactList/ContactList';
-import initialContacts from './data/contacts.json';
-
-function App() {
-  const [contacts, setContacts] = useState(initialContacts);
-
-  const deleteContact = (id) => {
-    setContacts((prev) => prev.filter((c) => c.id !== id));
-  };
-
-  return (
-    <div>
-      <h1>Phonebook</h1>
-      <ContactList contacts={contacts} onDelete={deleteContact} />
     </div>
   );
 }
