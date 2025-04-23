@@ -4,10 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 6px;
-  border: solid 1px black;
   background-color: inherit;
   padding: 0 10px;
+  background-color: rgb(85, 177, 216);
 }
 
 .name-and-phone {
@@ -17,12 +16,16 @@
 }
 
 .name {
+  font-size: 20px;
+  font-weight: 500;
   display: flex;
   gap: 8px;
   line-height: 1;
 }
 
 .phone {
+  font-size: 20px;
+  font-weight: 500;
   display: flex;
   gap: 8px;
 }
@@ -48,4 +51,19 @@ li {
 
 p {
   margin: 0;
+}
+
+.delete-button {
+  font-size: 20px;
+  color: aliceblue;
+  background-color: rgb(70, 73, 74);
+
+  appearance: none;
+  border: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.delete-button:hover,
+.delete-button:focus {
+  background-color: rgb(99, 103, 105);
 }

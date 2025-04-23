@@ -11,3 +11,9 @@
   align-items: flex-start;
   gap: 24px;
 }
+
+.main-header {
+  color: rgb(50, 164, 213);
+  font-size: 64px;
+  margin-bottom: 24px;
+}

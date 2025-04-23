@@ -3,9 +3,52 @@
   flex-direction: column;
 }
 
+input[type="text" i] {
+  font-size: 18px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field:focus {
+  outline: none;
+  border: solid 1px rgb(12, 157, 219);
+}
+
+.label {
+  font-size: 19px;
+  font-weight: 500;
+}
+
 .field {
-  margin-bottom: 16px;
   width: 370px;
   height: 40px;
   padding: 0 10px;
+  border: 1px solid #bbb9b9;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.button {
+  font-size: 20px;
+  color: aliceblue;
+  background-color: rgb(70, 73, 74);
+  margin-top: 32px;
+  appearance: none;
+  border: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgb(99, 103, 105);
 }

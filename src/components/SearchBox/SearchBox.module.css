@@ -7,11 +7,23 @@
   width: 370px;
 }
 
+input[type="text" i] {
+  font-size: 18px;
+}
+
 input {
+  width: 370px;
   height: 40px;
   padding: 0 10px;
+  border: 1px solid #bbb9b9;
+}
+
+input:focus {
+  outline: none;
+  border: solid 1px rgb(12, 157, 219);
 }
 
 label {
-  text-align: left;
+  font-size: 19px;
+  font-weight: 500;
 }
