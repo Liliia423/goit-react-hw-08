@@ -63,6 +63,9 @@ export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, filter) => {
     const normalized = filter.toLowerCase().trim();
-    return contacts.filter((contact) => contact.name.toLowerCase().includes(normalized));
+    return contacts.filter((contact) => {
+      const [firstName, lastName] = contact.name.toLowerCase().split(' ');
+      return firstName.startsWith(normalized) || (lastName && lastName.startsWith(normalized));
+    });
   },
 );
