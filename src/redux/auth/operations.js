@@ -1,11 +1,8 @@
-// src/redux/auth/operations.js
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// Базова URL-адреса бекенда
 axios.defaults.baseURL = 'https://connections-api.goit.global';
 
-// Функції для керування токеном
 const setAuthHeader = (token) => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
@@ -14,7 +11,6 @@ const clearAuthHeader = () => {
   delete axios.defaults.headers.common.Authorization;
 };
 
-// Операція реєстрації
 export const register = createAsyncThunk('auth/register', async (credentials, thunkAPI) => {
   try {
     const res = await axios.post('/users/signup', credentials);
@@ -25,7 +21,6 @@ export const register = createAsyncThunk('auth/register', async (credentials, th
   }
 });
 
-// Операція логіну
 export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI) => {
   try {
     const res = await axios.post('/users/login', credentials);
@@ -36,7 +31,6 @@ export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI
   }
 });
 
-// Операція логауту
 export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
@@ -46,7 +40,6 @@ export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   }
 });
 
-// Операція оновлення користувача
 export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
   const state = thunkAPI.getState();
   const persistedToken = state.auth.token;

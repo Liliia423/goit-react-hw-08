@@ -1,23 +1,3 @@
-{
-  /*import ContactForm from '../../components/ContactForm/ContactForm';
-import SearchBox from '../../components/SearchBox/SearchBox';
-import ContactList from '../../components/ContactList/ContactList';
-
-import styles from './ContactsPage.module.css';
-
-export default function ContactsPage() {
-  return (
-    <div className={styles.pageContainer}>
-      <h1 className={styles.title}>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
-    </div>
-  );
-}*/
-}
-
-// src/pages/ContactsPage/ContactsPage.jsx
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
