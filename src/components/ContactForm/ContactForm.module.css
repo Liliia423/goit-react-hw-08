@@ -46,6 +46,7 @@ input[type="text" i] {
   appearance: none;
   border: none;
   transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 370px;
 }
 
 .button:hover,

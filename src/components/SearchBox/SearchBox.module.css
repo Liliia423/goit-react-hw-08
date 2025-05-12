@@ -8,6 +8,12 @@
 }
 
 input[type="text" i] {
+  width: 370px;
+  font-size: 18px;
+}
+
+input[type="email" i] {
+  width: 370px;
   font-size: 18px;
 }
 
